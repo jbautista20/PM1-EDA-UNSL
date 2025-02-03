@@ -209,7 +209,7 @@ int localizarPrestador(int dni, Prestadores lso[],int *pos){
     return 0;
 }
 
-/**Retorna 1 si se insertó, -1 si está llena y 0 si ya estaba*/
+/**Retorna 1 si se inserto, -1 si esta llena y 0 si ya estaba*/
 int insertarPrestador(Prestadores lso[], Prestadores elem, int *cargados){
     if(*cargados==MAX-1){
         return -1;
@@ -293,7 +293,7 @@ void memorizacionPrevia(Prestadores lso[],int *cargados){
             fscanf(archivo, " %[^\n]", aux.mail);
             fscanf(archivo, " %[^\n]", aux.telefono);
             if(aux.DNI < INFINITO && aux.DNI >0){
-                confirmar=insertarPrestador(lso, aux, cargados);// Llamar a la función alta para almacenar los datos
+                confirmar=insertarPrestador(lso, aux, cargados);// Llamar a la funcion alta para almacenar los datos
                 if(confirmar==0){
                     printf("\nEl prestador con DNI %d no se pudo cargar porque ya existia en la lista.", aux.DNI);
                 }else{
